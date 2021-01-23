@@ -35,16 +35,15 @@ class _NewsDetailState extends State<NewsDetail> {
                   setState(() {
                     failed = true;
                     Fluttertoast.showToast(
-                        msg: "Something went wrong..! Try again later",
+                        msg: "Page loading Error..! Try again later",
                         toastLength: Toast.LENGTH_SHORT,
                         gravity: ToastGravity.CENTER,
                         timeInSecForIosWeb: 1,
                         backgroundColor: Colors.red,
                         textColor: Colors.white,
                         fontSize: 16.0);
-                    Future.delayed(const Duration(seconds: 3), () {
-                      Navigator.pop(context);
-                    });
+
+                    Navigator.pop(context);
                   });
                 },
                 onPageFinished: (value) {
